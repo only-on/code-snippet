@@ -1,0 +1,24 @@
+<style type="text/css">
+    #gundong {
+        width: 320px;
+        margin: 0 auto;
+        background: #dd127b;
+        height: 28px;
+        line-height: 28px;
+        overflow: hidden;
+        font-size: 14px;
+        color: #fff;
+        font-weight: bold;white-space:nowrap
+    }
+</style>
+<title>javascript文字无间隙滚动示例</title>
+<div id="gundong">asdddfsddsfdfsddd2523ddsfdddddr2ddetetdddgdfs8o980dd12dsaczvbety|</div>
+<script>
+    var gundong = document.getElementById("gundong");
+    var step = 2, scrollWidth = gundong.scrollWidth;
+    gundong.innerHTML += gundong.innerHTML;
+    var timer = setInterval(function () {
+        gundong.scrollLeft += step;
+        if (gundong.scrollLeft >= scrollWidth) gundong.scrollLeft = 0
+    }, 50);
+</script>
